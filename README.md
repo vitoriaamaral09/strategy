@@ -7,7 +7,11 @@ O padrão Strategy permite definir uma família de algoritmos, encapsular cada u
 
 ### Exemplo em Java
 
-O exemplo está em um único arquivo `StrategyPattern.java`, contendo a interface Strategy, as implementações concretas, o contexto e a classe main.
+O exemplo implementa um sistema de pagamento usando o padrão Strategy. Inclui diferentes métodos de pagamento (cartão de crédito, PayPal e boleto) que podem ser trocados dinamicamente em um carrinho de compras.
+
+- `PaymentStrategy`: Interface para estratégias de pagamento.
+- `CreditCardPayment`, `PayPalPayment`, `BoletoPayment`: Implementações concretas.
+- `ShoppingCart`: Contexto que utiliza a estratégia para processar pagamentos.
 
 #### Como executar
 
@@ -20,8 +24,9 @@ java StrategyPattern
 
 Saída esperada:
 ```
-Strategy A: HELLO WORLD
-Strategy B: hello world
+Pagando R$ 100.0 com cartão de crédito **** **** **** 3456
+Pagando R$ 100.0 via PayPal para usuario@email.com
+Gerando boleto no valor de R$ 15.0. Pague até a data de vencimento.
 ```
 
 ### Dependências
